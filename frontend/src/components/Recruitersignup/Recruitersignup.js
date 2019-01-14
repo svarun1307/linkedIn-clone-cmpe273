@@ -34,17 +34,6 @@ class RecruiterSignup extends React.Component {
     this.handleLogin = this.handleLogin.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-    /* try {
-      //this.props.dispatch(fetchProfile());
-      if (nextProps.LoginReducer.user_id && nextProps.LoginReducer.user_token) {
-        //this.props.history.push("/profile");
-      }
-    } catch (e) {
-      console.log(e);
-    } */
-  }
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
@@ -53,15 +42,6 @@ class RecruiterSignup extends React.Component {
       authFlag: false
     });
   }
-
-  //   handleLogin = async e => {
-  //     let data = {
-  //       email: this.state.loginemail, //"saketthakare@gmail.com",
-  //       password: this.state.loginpassword
-  //     };
-  //     // this.props.dispatch(login(data));
-
-  //   };
 
   async handleLogin(e) {
     e.preventDefault();
